@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -9,10 +9,11 @@ let package = Package(
     products: [
       .library(name: "CNMSSH", targets: ["CNMSSH"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/marcuseckert/CSSH", from: .init(1, 0, 0))
-    ],
     targets: [
-        .target(name: "CNMSSH", dependencies: ["CSSH"])
+        .systemLibrary(
+            name: "libssh2"
+        ),
+        .target(name: "CNMSSH",
+                dependencies: ["libssh2"])
     ]
 )
