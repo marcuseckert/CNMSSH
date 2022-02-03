@@ -7,6 +7,6 @@ import PackageDescription
 let package = Package(
     name: "CNMSSH",
     dependencies: [
-        .Package(url: "https://github.com/jakeheis/CSSH", majorVersion: 1)
+        .Package(url: "https://github.com/marcuseckert/CSSH", majorVersion: 1)
     ]
 )
