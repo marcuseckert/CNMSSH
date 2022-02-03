@@ -6,7 +6,13 @@ import PackageDescription
 
 let package = Package(
     name: "CNMSSH",
+    products: [
+      .library(name: "CNMSSH", targets: ["CNMSSH"])
+    ],
     dependencies: [
         .package(url: "https://github.com/marcuseckert/CSSH", from: .init(1, 0, 0))
+    ],
+    targets: [
+        .target(name: "CNMSSH", dependencies: ["CSSH"])
     ]
 )
