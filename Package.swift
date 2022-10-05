@@ -11,7 +11,8 @@ let package = Package(
     ],
     targets: [
         .systemLibrary(
-            name: "libssh2"
+            name: "libssh2",
+            pkgConfig: "libssh2"
         ),
         .target(name: "CNMSSH",
                 dependencies: ["libssh2"])
