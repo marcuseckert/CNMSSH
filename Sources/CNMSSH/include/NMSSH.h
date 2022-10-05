@@ -3,8 +3,8 @@
 #ifndef _NMSSH_
 #define _NMSSH_
 
-#include "/opt/homebrew/include/libssh2.h"
-#include "/opt/homebrew/include/libssh2_sftp.h"
+#include <libssh2.h>
+#include <libssh2_sftp.h>
 
 #import "NMSSHSessionDelegate.h"
 #import "NMSSHChannelDelegate.h"
